@@ -1,16 +1,13 @@
 package factory_method_pattern;
 
-import factory_method_pattern.factory.FourVehicleFactory;
-import factory_method_pattern.factory.OcataWheelerFactory;
-import factory_method_pattern.factory.TwoVehicleFactory;
-
+import factory_method_pattern.factory.*;
 public class Test {
    public static void main(String[] args) {
-       Client c1 = new Client(new TwoVehicleFactory());
-       Client c2 = new Client(new FourVehicleFactory());
-       Client c3 = new Client(new OcataWheelerFactory());
-       c1.getVehicle().printVehicle();
-       c2.getVehicle().printVehicle();
-       c3.getVehicle().printVehicle();
-   } 
+       Client c1 = new Client(new SMSFactory());
+       Client c2 = new Client(new EmailFactory());
+       Client c3 = new Client(new PushFactory());
+       c1.geNotification().sendMessage("hi");
+       c2.geNotification().sendMessage("hi");
+       c3.geNotification().sendMessage("hi");
+ } 
 }

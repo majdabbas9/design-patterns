@@ -1,14 +1,14 @@
 package factory_method_pattern;
 
-import factory_method_pattern.factory.VehicleFactory;
-import factory_method_pattern.vehicle.Vehicle;
+import factory_method_pattern.factory.NotificationFactory;
+import factory_method_pattern.product.Notification;
 
 public class Client {
-   private final  Vehicle privateVehicle;
-   public Client(VehicleFactory vf){
-    this.privateVehicle = vf.create();
+   private final  Notification notification;
+   public Client(NotificationFactory vf){
+    this.notification = vf.createNotification();
    }
-   public Vehicle getVehicle(){
-    return this.privateVehicle;
+   public Notification geNotification(){
+    return this.notification;
    }
 }
