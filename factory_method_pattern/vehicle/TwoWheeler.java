@@ -1,4 +1,4 @@
-package factory_method_pattern; 
+package factory_method_pattern.vehicle; 
 public class TwoWheeler implements Vehicle {
     @Override
     public void printVehicle(){

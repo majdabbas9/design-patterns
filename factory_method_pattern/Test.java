@@ -1,5 +1,9 @@
 package factory_method_pattern;
 
+import factory_method_pattern.factory.FourVehicleFactory;
+import factory_method_pattern.factory.OcataWheelerFactory;
+import factory_method_pattern.factory.TwoVehicleFactory;
+
 public class Test {
    public static void main(String[] args) {
        Client c1 = new Client(new TwoVehicleFactory());
