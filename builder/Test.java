@@ -1,14 +1,12 @@
 package builder;
 
-import builder.builderComp.*;
-import builder.product.Computer;
+import builder.HttpRequest.HttpBuilder;
 
 public class Test {
-   public static void main(String[] args) {
-       Builder b = new ComputerBuilder();
-       ComputerDirector cd = new ComputerDirector();
-       cd.construct(b, "motherBoard", "Cpu", "Ram", "Storage");
-       Computer c = b.getInfo();
-       c.displayInfo();
-   }
+    public static void main(String[] args) {
+        HttpRequest r1 = new HttpRequest.HttpBuilder("https://api.myapp.com/users")
+                .addBody("hi").addHead("hi", "hi").build();
+        System.out.println(r1);
+
+    }
 }
